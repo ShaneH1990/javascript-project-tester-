@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function(){
     let answer6 = document.getElementById('ce');
     //I can put my own declared function(answered) inside of the function for answer1 and it works perfectly!
     answer1.addEventListener("click", function (){ answered();});
-    answer2.addEventListener("click", function (){ alert("you selected Top Gun");});
+    answer2.addEventListener("click", function (){ answeredTwo(); test();});
     answer3.addEventListener("click", function (){ alert("you selected Jack Reacher");});
     answer4.addEventListener("click", function (){ alert("you selected Robert Downey Jr");});
     answer5.addEventListener("click", function (){ alert("you selected Tom Cruise");});
@@ -17,7 +17,15 @@ document.addEventListener("DOMContentLoaded", function(){
 
     function answered(){
         alert("you selected Mission Impossible");
-
-
+        
     }
+
+    function answeredTwo(){
+        alert("you selected Top Gun");
+    }
+    
+    function test(){
+            alert("you selected 2 answers!");
+    }
+    //Need If Statement for two list items being selected!
 })
