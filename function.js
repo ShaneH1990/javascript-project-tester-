@@ -15,6 +15,15 @@ document.addEventListener("DOMContentLoaded", function(){
     answer5.addEventListener("click", function (){ alert("you selected Tom Cruise");});
     answer6.addEventListener("click", function (){ alert("you selected Chris evans");});
 
+    //The Arraylist for the list items contains the answer the for loop is iterting through the array and printing out"<li id =tg></li>"
+    //to view printout go to inspect on webpage then go to console and click on info which should display the output
+    let array = [answer1,answer2,answer3,answer4];
+    for(i=0;i<array.length;i++){
+        console.log(array[1]);
+
+    }
+    
+    
     function answered(){
         alert("you selected Mission Impossible");
         
