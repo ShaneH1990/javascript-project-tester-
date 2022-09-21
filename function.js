@@ -13,17 +13,20 @@ document.addEventListener("DOMContentLoaded", function(){
         result.addEventListener("click",function(){
             if(result===answer1){
                 alert("answer 1 selected");
+                answer1.style.backgroundColor="grey";
             }else if(result===answer2){
                 alert("answer 2 selected");
+                answer2.style.backgroundColor="green";
             }else if(result===answer3){
                 alert("answer 3 selected!");
             }else if(result===answer4){
-                alert("answe 4 selected");
+                alert("answer 4 selected");
             }
     for(let resultTwo of results){
         resultTwo.addEventListener("click",function(){
             if(resultTwo===answer1){
                 alert("2 answers selected!!");
+                answer1.style.backgroundColor="white";
             }else{
                 alert("only 1 answer can be selected!");
             }
