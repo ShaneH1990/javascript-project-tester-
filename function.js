@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function(){
     let answer5 = document.getElementById('tc');
     let answer6 = document.getElementById('ce');
     let results = document.getElementsByTagName("li");
+    let answer = document.getElementsByTagName("button");
 
     for(let result of results){
         result.addEventListener("click",function(){
@@ -22,6 +23,8 @@ document.addEventListener("DOMContentLoaded", function(){
             }else if(result===answer4){
                 alert("answer 4 selected");
             }
+        })
+    }
     for(let resultTwo of results){
         resultTwo.addEventListener("click",function(){
             if(resultTwo===answer1){
@@ -33,9 +36,26 @@ document.addEventListener("DOMContentLoaded", function(){
         })
     }
 
+    for(let firstAnswer of answer){
+        firstAnswer.addEventListener("click",function(){
+            if(this.getAttribute("data-type")=== "answer")
+            alert("are you finished?");
+            let next = document.createElement("button");
+                next.innerHTML="NEXT";
+                document.body.append(next);
         })
     }
 
+    for(let secondAnswer of answer){
+        secondAnswer.addEventListener("click",function(){
+            if(this.getAttribute("data-type")=== "answer"){
+                answer1.style.backgroundColor = "red";
+                answer2.style.backgroundColor = "green";
+                answer3.style.backgroundColor  = "red";
+                
+            }
+        })
+    }
     //I can put my own declared function(answered) inside of the function for answer1 and it works perfectly!
     //answer1.addEventListener("click", function (){ answered();});
     //answer2.addEventListener("click", function (){ answeredTwo(); test();});
