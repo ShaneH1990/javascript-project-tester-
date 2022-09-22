@@ -9,6 +9,10 @@ document.addEventListener("DOMContentLoaded", function(){
     let answer6 = document.getElementById('ce');
     let results = document.getElementsByTagName("li");
     let answer = document.getElementsByTagName("button");
+    //changed p1 and p2 from class to id because getElementsByClassName is READ-ONLY!
+    let question = document.getElementById("p1");
+    let question2 = document.getElementById("p2");
+    let paragraph = document.getElementsByTagName("p");
 
     for(let result of results){
         result.addEventListener("click",function(){
@@ -44,6 +48,18 @@ document.addEventListener("DOMContentLoaded", function(){
                 next.innerHTML="NEXT";
                 next.addEventListener("click",function(){
                     alert("this button now works!");
+                    question.remove();
+                    question2.remove();
+                    answer1.remove();
+                    answer2.remove();
+                    answer3.remove();
+                    answer4.remove();
+                    answer5.remove();
+                    answer6.remove();
+
+                    if(paragraph===questions){
+                        questions.remove();
+                    }
                 })
                 document.body.appendChild(next);
                 firstAnswer.remove();
