@@ -42,7 +42,10 @@ document.addEventListener("DOMContentLoaded", function(){
             alert("are you finished?");
             let next = document.createElement("button");
                 next.innerHTML="NEXT";
-                document.body.append(next);
+                next.addEventListener("click",function(){
+                    alert("this button now works!");
+                })
+                document.body.appendChild(next);
                 firstAnswer.remove();
         })
     }
