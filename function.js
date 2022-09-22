@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function(){
             let next = document.createElement("button");
                 next.innerHTML="NEXT";
                 document.body.append(next);
+                firstAnswer.remove();
         })
     }
 
@@ -56,6 +57,19 @@ document.addEventListener("DOMContentLoaded", function(){
             }
         })
     }
+
+       for(let nextOne of next){
+        nextOne.addEventListener("click",function(){
+            if(this.getAttribute("data-type")==="next"){
+                alert("you pressed next!");
+                //let findIt = document.getElementsByTagName("button");
+                //let question2 = document.createElement("li");
+                //question2.innerHTML = "name the character cillain murphy plays in 'the Peaky Blinders' tv show";
+                //document.append(question2);
+            }
+        })
+        }
+    
     //I can put my own declared function(answered) inside of the function for answer1 and it works perfectly!
     //answer1.addEventListener("click", function (){ answered();});
     //answer2.addEventListener("click", function (){ answeredTwo(); test();});
