@@ -7,11 +7,15 @@ document.addEventListener("DOMContentLoaded", function(){
     let answer4 = document.getElementById('rd');
     let answer5 = document.getElementById('tc');
     let answer6 = document.getElementById('ce');
+    let answer7 = document.getElementById('ya');
+    let answer8 = document.getElementById('sk');
+    let answer9 = document.getElementById('hk');
     let results = document.getElementsByTagName("li");
     let answer = document.getElementsByTagName("button");
     //changed p1 and p2 from class to id because getElementsByClassName is READ-ONLY!
     let question = document.getElementById("p1");
     let question2 = document.getElementById("p2");
+    let question3 = document.getElementById("p3");
     let paragraph = document.getElementsByTagName("p");
 
     for(let result of results){
@@ -50,19 +54,31 @@ document.addEventListener("DOMContentLoaded", function(){
                     alert("this button now works!");
                     question.remove();
                     question2.remove();
+                    question3.remove();
                     answer1.remove();
                     answer2.remove();
                     answer3.remove();
                     answer4.remove();
                     answer5.remove();
                     answer6.remove();
+                    answer7.remove();
+                    answer8.remove();
+                    answer9.remove();
+                    next.style.display = "none";
+                    let newOne = document.createElement("button");
+                    newOne.innerHTML="submit";
+
+                    let question4 = document.createElement("li");
+                    question4.innerHTML= "Question 4: what is the name of the star wars character Ewan Mcgregor played?"
+                    document.body.appendChild(question4);
+                    document.body.appendChild(newOne);
 
                     if(paragraph===questions){
                         questions.remove();
                     }
                 })
                 document.body.appendChild(next);
-                firstAnswer.remove();
+                firstAnswer.style.display = "none";
         })
     }
 
@@ -79,13 +95,11 @@ document.addEventListener("DOMContentLoaded", function(){
 
        for(let nextOne of next){
         nextOne.addEventListener("click",function(){
-            if(this.getAttribute("data-type")==="next"){
                 alert("you pressed next!");
                 //let findIt = document.getElementsByTagName("button");
                 //let question2 = document.createElement("li");
                 //question2.innerHTML = "name the character cillain murphy plays in 'the Peaky Blinders' tv show";
                 //document.append(question2);
-            }
         })
         }
     
