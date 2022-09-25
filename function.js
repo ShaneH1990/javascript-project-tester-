@@ -5,7 +5,16 @@ document.addEventListener("DOMContentLoaded", function(){
     let answer4 = document.getElementById('rd');
     let answer5 = document.getElementById('tc');
     let answer6 = document.getElementById('ce');
+    let answer7 = document.getElementById('ya');
+    let answer8 = document.getElementById('sk');
+    let answer9 = document.getElementById('hk');
     let results = document.getElementsByTagName("li");
+    let info1 = document.getElementById('p1');
+    let info2 = document.getElementById('p2');
+    let info3 = document.getElementById('p3');
+    let answer = document.getElementsByTagName("button");
+    let buttonInfo = document.getElementById('btn');
+
     for(let result of results){
         result.addEventListener("click",function(){
             if(result===answer1){
@@ -13,28 +22,61 @@ document.addEventListener("DOMContentLoaded", function(){
                 answer1.style.backgroundColor="grey";
             }else if(result===answer2){
                 alert("answer 2 selected");
-                answer2.style.backgroundColor="green";
+                answer2.style.backgroundColor="grey";
             }else if(result===answer3){
                 alert("answer 3 selected!");
+                answer3.style.backgroundColor="grey";
             }else if(result===answer4){
                 alert("answer 4 selected");
+                answer4.style.backgroundColor="grey";
+            }else if(result===answer5){
+                alert("answer 5 selected");
+                answer5.style.backgroundColor="grey";
+            }else if(result===answer6){
+                alert("answer 6 selected");
+                answer6.style.backgroundColor="grey";
+            }else if(result===answer7){
+                alert("answer 7 selected");
+                answer7.style.backgroundColor="grey";
+            }else if(result===answer8){
+                alert("answer 8 selected");
+                answer8.style.backgroundColor="grey";
+            }else if(result===answer9){
+                alert("answer 9 selected");
+                answer9.style.backgroundColor="grey";
             }
+
     for(let resultTwo of results){
         resultTwo.addEventListener("click",function(){
             if(resultTwo===answer1){
                 alert("2 answers selected!!");
                 answer1.style.backgroundColor="white";
-            }else{
-                alert("only 1 answer can be selected!");
-                answer1.style.backgroundColor="white";
+            }else if(resultTwo===answer2){
                 answer2.style.backgroundColor="white";
-                answer3.style.backgroundColor="white";
-                answer4.style.backgroundColor="white";
             }
         })
     }
+
+    for(let answered of answer){
+        answered.addEventListener("click",function(){
+            if(this.getAttribute("data-type")=== "answer"){
+            answer1.remove();
+            answer2.remove();
+            answer3.remove();
+            answer4.remove();
+            answer5.remove();
+            answer6.remove();
+            answer7.remove();
+            answer8.remove();
+            answer9.remove();
+            info1.remove();
+            info2.remove();
+            info3.remove();
+            }
         })
     }
+    })
+}
     //I can put my own declared function(answered) inside of the function for answer1 and it works perfectly!
     //answer1.addEventListener("click", function (){ answered();});
     //answer2.addEventListener("click", function (){ answeredTwo(); test();});
