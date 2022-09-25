@@ -25,11 +25,13 @@ document.addEventListener("DOMContentLoaded", function(){
                 answer1.style.backgroundColor="grey";
             }else if(result===answer2){
                 alert("answer 2 selected");
-                answer2.style.backgroundColor="green";
+                answer2.style.backgroundColor="grey";
             }else if(result===answer3){
                 alert("answer 3 selected!");
+                answer3.style.backgroundColor="grey";
             }else if(result===answer4){
                 alert("answer 4 selected");
+                answer4.style.backgroundColor="grey";
             }
         })
     }
