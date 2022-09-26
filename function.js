@@ -8,12 +8,43 @@ document.addEventListener("DOMContentLoaded", function(){
     let answer7 = document.getElementById('ya');
     let answer8 = document.getElementById('sk');
     let answer9 = document.getElementById('hk');
+    let answer10= document.getElementById('ar');
+    let answer11= document.getElementById('oi');
+    let answer12= document.getElementById('qn');
+    let answer13= document.getElementById('onethree');
+    let answer14= document.getElementById('onesix');
+    let answer15= document.getElementById('oneeight');
+    let answer16= document.getElementById('cb');
+    let answer17= document.getElementById('ba');
+    let answer18= document.getElementById('rp');
+
+
     let results = document.getElementsByTagName("li");
+
     let info1 = document.getElementById('p1');
     let info2 = document.getElementById('p2');
     let info3 = document.getElementById('p3');
+    let info4 = document.getElementById('p4');
+    let info5 = document.getElementById('p5');
+    let info6 = document.getElementById('p6');
+
     let answer = document.getElementsByTagName("button");
     let buttonInfo = document.getElementById('btn');
+    let buttonInfo2 = document.getElementById('btn2');
+
+    buttonInfo2.style.display="none";
+    info4.style.display="none";
+    info5.style.display="none";
+    info6.style.display="none";
+    answer10.style.display = "none";
+    answer11.style.display = "none";
+    answer12.style.display = "none";
+    answer13.style.display = "none";
+    answer14.style.display = "none";
+    answer15.style.display = "none";
+    answer16.style.display = "none";
+    answer17.style.display = "none";
+    answer18.style.display = "none";
 
     for(let result of results){
         result.addEventListener("click",function(){
@@ -60,6 +91,7 @@ document.addEventListener("DOMContentLoaded", function(){
     for(let answered of answer){
         answered.addEventListener("click",function(){
             if(this.getAttribute("data-type")=== "answer"){
+            buttonInfo.style.display="none";
             answer1.remove();
             answer2.remove();
             answer3.remove();
@@ -69,9 +101,22 @@ document.addEventListener("DOMContentLoaded", function(){
             answer7.remove();
             answer8.remove();
             answer9.remove();
-            info1.remove();
-            info2.remove();
-            info3.remove();
+            info1.style.display="none";
+            info2.style.display="none";
+            info3.style.display="none";
+            info4.style.display="block";
+            info5.style.display="block";
+            info6.style.display="block";
+            answer10.style.display = "list-item";
+            answer11.style.display = "list-item";
+            answer12.style.display = "list-item";
+            answer13.style.display = "list-item";
+            answer14.style.display = "list-item";
+            answer15.style.display = "list-item";
+            answer16.style.display = "list-item";
+            answer17.style.display = "list-item";
+            answer18.style.display = "list-item";
+            buttonInfo2.style.display="block";
             }
         })
     }
