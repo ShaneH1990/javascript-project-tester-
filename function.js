@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(){
+    //Variables to get HTML element info
     let answer1 = document.getElementById('mi');
     let answer2 = document.getElementById('tg');
     let answer3 = document.getElementById('jr');
@@ -27,11 +28,12 @@ document.addEventListener("DOMContentLoaded", function(){
     let info4 = document.getElementById('p4');
     let info5 = document.getElementById('p5');
     let info6 = document.getElementById('p6');
-
+    //variables for using HTML buttons in javascript
     let answer = document.getElementsByTagName("button");
     let buttonInfo = document.getElementById('btn');
     let buttonInfo2 = document.getElementById('btn2');
 
+    //display is set to 'none' to hide so they can be seen by the user 
     buttonInfo2.style.display="none";
     info4.style.display="none";
     info5.style.display="none";
@@ -46,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function(){
     answer17.style.display = "none";
     answer18.style.display = "none";
 
+    //for loop for list items that are assigned to the variable 'result'
     for(let result of results){
         result.addEventListener("click",function(){
             if(result===answer1){
@@ -76,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 alert("answer 9 selected");
                 answer9.style.backgroundColor="grey";
             }
-
+    //second for loop for when the user double clicks on a list item answer
     for(let resultTwo of results){
         resultTwo.addEventListener("click",function(){
             if(resultTwo===answer1){
@@ -87,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function(){
             }
         })
     }
-
+    //for loop used when the user clicks on the button assigned to the variable 'result'
     for(let answered of answer){
         answered.addEventListener("click",function(){
             if(this.getAttribute("data-type")=== "answer"){
@@ -118,36 +121,44 @@ document.addEventListener("DOMContentLoaded", function(){
             answer18.style.display = "list-item";
             buttonInfo2.style.display="block";
             }
+    //second for loop for when the user clicks on answers on the next page of questions
+    for(let resultThree of results){
+        resultThree.addEventListener("click",function(){
+            if(resultThree===answer10){
+                alert("answer 10 selected");
+                answer10.style.backgroundColor="grey";
+            }else if(resultThree===answer11){
+                alert("answer 11 selected");
+                answer11.style.backgroundColor="grey";
+            }else if(resultThree===answer12){
+                alert("answer 12 selected");
+                answer12.style.backgroundColor="grey";
+            }else if(resultThree===answer13){
+                alert("answer 13 selected");
+                answer13.style.backgroundColor="grey";
+            }else if(resultThree===answer14){
+                alert("answer 14 selected");
+                answer14.style.backgroundColor="grey";
+            }else if(resultThree===answer15){
+                alert("answer 15 selected");
+                answer15.style.backgroundColor="grey";
+            }else if(resultThree===answer16){
+                alert("answer 16 selected");
+                answer16.style.backgroundColor="grey";
+            }else if(resultThree===answer17){
+                alert("answer17 selected");
+                answer17.style.backgroundColor="grey";
+            }else if(resultThree===answer18){
+                alert("answer18 selected");
+                answer18.style.backgroundColor="grey";
+            }
+        })
+    }
         })
     }
     })
 }
-    //I can put my own declared function(answered) inside of the function for answer1 and it works perfectly!
-    //answer1.addEventListener("click", function (){ answered();});
-    //answer2.addEventListener("click", function (){ answeredTwo(); test();});
-    //answer3.addEventListener("click", function (){ alert("you selected Jack Reacher");});
-    //answer4.addEventListener("click", function (){ alert("you selected Robert Downey Jr");});
-    //answer5.addEventListener("click", function (){ alert("you selected Tom Cruise");});
-    //answer6.addEventListener("click", function (){ alert("you selected Chris evans");});
-    //The Arraylist for the list items contains the answer the for loop is iterting through the array and printing out"<li id =tg></li>"
-    //to view printout go to inspect on webpage then go to console and click on info which should display the output
-    //let array = [answer1,answer2,answer3,answer4];
-    //for(i=0;i<array.length;i++){
-    //    console.log(array[1]);
-    //}
     
-    //function answered(){
-    //    alert("you selected Mission Impossible");
-        
-    //}
-    //function answeredTwo(){
-   //     alert("you selected Top Gun");
-    //}
-    
-    //function test(){
-    //        alert("you selected 2 answers!");
-   // }
-    //Need If Statement for two list items being selected!
 })
 
 
